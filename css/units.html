@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>units in CSS</title>
+
+</head>
+
+<style>
+    #element1 {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+    }
+
+    #child {
+        background-color: yellow;
+        width: 15px;
+        height: 15px;
+
+        max-width: 90%;
+        /* whene element exceeds max-width we can overwrite width with max-width */
+        max-height: 90%;
+        /* whene element exceeds max-height we can overwrite height with max-height */
+
+        min-width: 20%;
+        min-height: 20%;
+
+        /* whene element goes below min-height/width we can overwrite height/width with min-height/width */
+
+    }
+
+    /* max & min */
+
+    /* max-height */
+    /* max-width */
+    /* min-height */
+    /* min-width */
+</style>
+
+<body>
+
+    <div id="element1">
+        <!-- this is some content -->
+        <div id="child"></div>
+    </div>
+
+</body>
+
+</html>
