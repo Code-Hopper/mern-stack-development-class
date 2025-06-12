@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 500vh;
+        }
+
+        .parent {
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .element {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* position: value; */
+            /* static, relative, abolute, fixed, sticky */
+            /* top, bottom, left, right, z-index */
+            /* top0, left0 */
+            position: relative;
+            /* the element moves without droping it's original position */
+            left: 500px;
+            top: 200px;
+            z-index: 2;
+        }
+
+        .element2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            left: 500px;
+            top: 200px;
+        }
+
+        .element3 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 4;
+            /* bottom: 0;
+            right: 0; */
+        }
+
+        .element4 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+        }
+
+        .element5 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: sticky;
+            /* shows to position | before scrolled it's relative after being scrolled it's fixed */
+            top: 0;
+        }
+
+        .parent2{
+            position: relative;
+            border: 2px solid black;
+            height: 500px;
+            width: 500px;;
+        }
+
+        .element6 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            left: 100%;
+            top: 100%;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <!-- <div class="parent">
+        <div class="element"></div>
+    </div>
+    <div class="element2"></div>
+
+    <div class="element3"></div>
+    <div class="element4"></div>
+
+    <div class="element5"></div> -->
+
+    <div class="parent2">
+        <div class="element6"></div>
+    </div>
+
+</body>
+
+</html>
