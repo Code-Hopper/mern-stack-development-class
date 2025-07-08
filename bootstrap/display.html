@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./bootstrap-5/css/bootstrap.css">
+
+    <style>
+        .element {
+            width: 200px;
+            height: 200px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .parent {
+            width: 500px;
+            height: 500px;
+        }
+
+        .child{
+            width: 100px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- d- display -->
+    <!-- d-[none, inlinem, block, inline-block, flex, grid] -->
+
+    <div class="element element2 bg-success fw-bold d-none">element2</div>
+    <div class="element element1 bg-danger d-inline-block">element1</div>
+    <div class="element element3 bg-info d-inline-block">element3</div>
+
+    <!-- gap-[0,1,2,3,4,5] -->
+    <!-- 0rem, 0.25rem, 2-.5rem, 3-.75rem, 4-1rem, 1.25rem -->
+    <!-- justify-content-[start, end, center, between , evenly, around] -->
+    <!-- align-items-[start, end, center, stretch , baseline] -->
+    <!-- flex-diretion[row, column, row-reverse, column-reverse] -->
+
+    <div
+        class="parent text-light fw-bold border border-3 border-danger my-5 mx-auto d-flex gap-3 justify-content-around align-items-center flex-row">
+        <div class="child child1 bg-danger order-1">child1</div>
+        <div class="child child2 bg-danger order-3">child2</div>
+        <div class="child child3 bg-danger flex-grow-1">child3</div>
+        <div class="child child4 bg-danger flex-shrink-1">child4</div>
+    </div>
+
+</body>
+
+</html>
