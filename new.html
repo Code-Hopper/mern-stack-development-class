@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap-5/css/bootstrap.css">
+
+    <style>
+        .progress-bar {
+            width: 0px;
+            animation: loading 10s ease infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container p-5 border">
+        <div class="progress">
+            <span class="progress-bar"></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

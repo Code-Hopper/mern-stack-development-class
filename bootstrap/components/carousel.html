@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .carousel-item>.content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container border p-5">
+        <div class="carousel slide carousel-fade" id="carousel-example-1">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <div class="content">
+                        <h1>item 1</h1>
+                        <img class="img-fluid" src="https://picsum.photos/id/237/200/300" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h1>item 2</h1>
+                        <img class="img-fluid" src="https://picsum.photos/id/238/200/300" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="content">
+                        <h1>item 3</h1>
+                        <img class="img-fluid" src="https://picsum.photos/id/239/200/300" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h1>item 4</h1>
+                        <img class="img-fluid" src="https://picsum.photos/id/240/200/300" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-example-1">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+            </button>
+
+            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-example-1">
+                <span class="btn btn-danger">click</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
