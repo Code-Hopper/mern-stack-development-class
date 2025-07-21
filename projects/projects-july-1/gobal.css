@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* theme */
+:root {
+    
+    --backgroundHex: #E9E3DF;
+    --primaryHex: #FF7A30;
+    --secondaryHex: #465C88;
+    --darkHex: #000000;
+
+    --backgroundRGB: 233, 227, 223;
+    --primaryRGB: 255, 122, 48;
+    --secondaryRGB: 70, 92, 136;
+    --darkRGB: 0, 0, 0;
+}
+
+body {
+    font-family: "Space Mono", monospace !important;
+    background-color: rgba(var(--backgroundRGB), .5) !important;
+}
+
+/* Text color utilities */
+.text-primary-custom {
+  color: var(--primaryHex) !important;
+}
+.text-secondary-custom {
+  color: var(--secondaryHex) !important;
+}
+.text-dark-custom {
+  color: var(--darkHex) !important;
+}
+.text-background-custom {
+  color: var(--backgroundHex) !important;
+}
+
+/* Background color utilities */
+.bg-primary-custom {
+  background-color: var(--primaryHex) !important;
+}
+.bg-secondary-custom {
+  background-color: var(--secondaryHex) !important;
+}
+.bg-dark-custom {
+  background-color: var(--darkHex) !important;
+}
+.bg-background-custom {
+  background-color: var(--backgroundHex) !important;
+}
+.bg-background-rgba {
+  background-color: rgba(var(--backgroundRGB), 0.5) !important;
+}
+
+/* Border color utilities */
+.border-primary-custom {
+  border-color: var(--primaryHex) !important;
+}
+.border-secondary-custom {
+  border-color: var(--secondaryHex) !important;
+}
+.border-dark-custom {
+  border-color: var(--darkHex) !important;
+}
+.border-background-custom {
+  border-color: var(--backgroundHex) !important;
+}
