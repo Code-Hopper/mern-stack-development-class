@@ -58,3 +58,42 @@
     border-radius: inherit;
     transform: scale(0.9);
 }
+
+/* heros section */
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--bs-light);
+}
+
+.hero .hero-cta {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: rgba(var(--primaryRGB), 1);
+    color: var(--bs-light);
+    position: relative;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.hero .hero-cta::before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    transition: all 0.5s ease;
+}
+
+.hero .hero-cta:hover::before {
+    height: 0px;
+}
+
+.hero .hero-cta:hover{
+    transform: translateY(10px);
+}
