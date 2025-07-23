@@ -87,13 +87,48 @@
     left: 0;
     top: 100%;
     background-color: rgba(0, 0, 0, .85);
-    transition: all 0.5s ease;
+    transition: all 0.25s ease;
 }
 
 .hero .hero-cta:hover::before {
     height: 0px;
 }
 
-.hero .hero-cta:hover{
+.hero .hero-cta:hover {
     transform: translateY(10px);
+}
+
+.hero-icon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: .25rem;
+    border-radius: 100%;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+}
+
+.icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
+}
+
+.about-me-moto img {
+    width: 150px;
+    filter: brightness(0) invert(1) opacity(50%);
+    transition: all 0.5s ease;
+}
+
+.about-me-moto img:hover {
+    filter: brightness(1) invert(0) opacity(100%);
 }
