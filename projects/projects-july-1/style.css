@@ -151,16 +151,18 @@
     left: 0;
     top: 100%;
     z-index: -1;
-    background: radial-gradient(blue 0%, blue 25%, rgba(0, 0, 255, .75) 30%, rgba(0, 0, 255, .75) 55%, rgba(0,0,255,0.5) 60% , rgba(0,0,255,0.5) 85%);
+    background: radial-gradient(rgba(0, 0, 255, 0.5) 0%, rgba(0, 0, 255, 0.5) 25%,
+            rgba(0, 0, 255, .75) 30%, rgba(0, 0, 255, .75) 55%,
+            blue 60%, blue 85%);
     border-radius: 100%;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.5s ease;
 }
 
-.service-container .service-card:hover::before{
+.service-container .service-card:hover::before {
     transform: translate(-50%, -50%) scale(3);
 }
 
-.service-container .service-card:hover{
+.service-container .service-card:hover {
     color: white !important;
 }
