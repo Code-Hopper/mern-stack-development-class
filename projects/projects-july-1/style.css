@@ -132,3 +132,35 @@
 .about-me-moto img:hover {
     filter: brightness(1) invert(0) opacity(100%);
 }
+
+/* service */
+
+.service-container .service-card {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+
+.service-container .service-card::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: -1;
+    background: radial-gradient(blue 0%, blue 25%, rgba(0, 0, 255, .75) 30%, rgba(0, 0, 255, .75) 55%, rgba(0,0,255,0.5) 60% , rgba(0,0,255,0.5) 85%);
+    border-radius: 100%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s ease;
+}
+
+.service-container .service-card:hover::before{
+    transform: translate(-50%, -50%) scale(3);
+}
+
+.service-container .service-card:hover{
+    color: white !important;
+}
