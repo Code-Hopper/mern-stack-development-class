@@ -1,6 +1,6 @@
-console.log("this is written usign external js file !")
+// console.log("this is written usign external js file !")
 
-console.log(document.querySelector("h1"))
+// console.log(document.querySelector("h1"))
 
 // syntax to create a variable
 
@@ -20,7 +20,7 @@ console.log(document.querySelector("h1"))
 // number(int, float, short, long, byte, double), string, boolean
 
 // non-primtive
-// object, array, function, null, NaN
+// object, array, function, null, NaN, undefined
 
 // int - -number to +number (no decimal point)
 
@@ -57,3 +57,45 @@ console.log(document.querySelector("h1"))
 // let age = 22;
 
 // console.log("hello ! name your age is " + age)
+
+// statements
+
+// let data1 = "to data here..."; // string
+// var data2 = true; //boolean
+// const data3 = 1000.5; //number
+
+// statements | expresions (=)
+
+// simple (output & input), conditional (conditional & looping)
+
+// console.log("amey khondekar")
+
+// document.write(true)
+
+// window.alert("this is some alert")
+
+// concatenation : joining of data
+
+// let name = "amey khondekar"
+// let age = 22
+// let city = "Nagpur"
+
+// console.log("hello! my name is " + name + " and my age is " + age + " i'm from " + city)
+
+// document.write("hello! my name is " + name + " and my age is " + age + " i'm from " + city)
+
+// window.alert("hello! my name is " + name + " and my age is " + age + " i'm from " + city)
+
+// input
+
+// let data = window.prompt("enter something")
+
+// console.log("user has sent : " + data)
+
+// let name = window.prompt("enter name")
+// let age = window.prompt("enter age")
+// let city = window.prompt("enter city")
+
+// prompt will always gets us a string
+
+// console.log("hello! my name is " + name + " and my age is " + age + " i'm from " + city)
