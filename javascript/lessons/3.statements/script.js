@@ -90,20 +90,40 @@ let c = 30
 
 // }
 
-if (a > b) {
-    if (a > c) {
-        console.log("a is greater than b & c !")
-    } else {
-        console.log("c is greater than a & b !")
-    }
-} else if (b > c) {
-    console.log("b is greater than a & c !")
-} else {
-    console.log("c is greater than a & b !")
-}
+// if (a > b) {
+//     if (a > c) {
+//         console.log("a is greater than b & c !")
+//     } else {
+//         console.log("c is greater than a & b !")
+//     }
+// } else if (b > c) {
+//     console.log("b is greater than a & c !")
+// } else {
+//     console.log("c is greater than a & b !")
+// }
 
 // console.log("programm completed")
 
 // looping condtional
 
 // while, do while, for , [for array & objects : forEach, for of , for in, map, filter]
+
+// age, license, learning_license
+
+let age = 17
+
+let license = false
+
+let learning_license = false
+
+if (age >= 18) {
+    if (license) {
+        console.log("you can drive !")
+    }else{
+        console.log("you can't drive !")
+    }
+} else if(learning_license) {
+    console.log("you can drive !")
+}else{
+    console.log("you can't drive !")
+}
