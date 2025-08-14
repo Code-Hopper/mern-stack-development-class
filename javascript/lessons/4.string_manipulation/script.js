@@ -80,9 +80,9 @@ let name = "   om kumar   "
 
 name = name.trim()
 
-name = name.replace(name.charAt(0),name.charAt(0).toUpperCase())
+name = name.replace(name.charAt(0), name.charAt(0).toUpperCase())
 
-name = name.replace(name.charAt(name.indexOf(" ") + 1),name.charAt(name.indexOf(" ") + 1).toUpperCase())
+name = name.replace(name.charAt(name.indexOf(" ") + 1), name.charAt(name.indexOf(" ") + 1).toUpperCase())
 
 console.log(name)
 
@@ -91,3 +91,87 @@ console.log(name)
 // to count a specific charchter within the string
 
 // wap in js to find out unquie charchter within a string
+
+// let string = "this is javascript"
+// // helo wrd
+
+// let unquieString = ""
+
+// for(let index =  0 ; index < string.length ; index++){
+//     let ch = string[index] // h
+
+//     let flag = false
+
+//     for(let check = 0 ; check < unquieString.length ; check++){
+//         if(ch===unquieString[check]){
+//             flag = true
+//         }
+//     }
+
+//     if(!flag && ch != " ") {
+//         unquieString += ch;
+//     }
+// }
+
+// console.log(unquieString)
+
+// wap in js to print count of each charchter occurence
+// t - 2
+// h - 1
+// i - 3
+// s - 3
+// j - 1
+// a - 2
+// v - 1
+// c - 1
+// r - 1
+// p - 1
+
+// template litral string
+
+// let name2 = "amey"
+// let age = 24
+
+// console.log("hello ! i'm "+ name2 + " my age is "+ age +" years !")
+
+// console.log(`hello ! i'm ${name2.toUpperCase()} my age is ${age}`)
+
+// regex - regular expresion
+
+// paterns | match /test for a string
+
+// mini 8 charchter
+// 1 upper case
+// 1 lower case
+// 1 digit
+
+// regex litrals
+
+// let paterns = /hello/
+
+// let newString = "hello world !"
+
+// console.log(newString.match(paterns))
+
+// let email = window.prompt("enter your email")
+
+// let patern1 = /@/
+
+// // email.match(patern1) && 
+
+
+// console.log("helloworld".indexOf(" "))
+
+// if(email.match(patern1) && (email.indexOf(" ") == -1)){
+//     console.log("is valid email")
+// }else{
+//     console.log("is not valid email")
+// }
+
+// console.log(patern1.test(email))
+
+// let patern = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,10}$/
+
+// console.log('hello hello HELLO 1'.match(/[0-9][A-Z]/gi))
+
+// console.log(patern.test("Helo1234567890"))

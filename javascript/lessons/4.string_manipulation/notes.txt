@@ -10,7 +10,7 @@ name.length -> 16
 
 "kuch bhi" -> string
 'kuch bhi' -> string
-`kuch bhi` -> string
+`kuch bhi` -> string(template litral)
 
 concatenation
 
