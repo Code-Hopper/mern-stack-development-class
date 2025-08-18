@@ -175,3 +175,27 @@ console.log(name)
 // console.log('hello hello HELLO 1'.match(/[0-9][A-Z]/gi))
 
 // console.log(patern.test("Helo1234567890"))
+
+// string.match(regex)
+// regex.test(string)
+
+// regex means a pattern which we are looking for within a string
+
+// let regex = /hello/
+
+// let string = "hello world"
+
+// string.match(regex)
+// // index where the patterns sees in the string
+
+// regex.test(string)
+// return boolean true/false
+
+// patterns
+// (?=.*[0-9]) // their has to be a digit(0-9), count atleast 1
+
+
+let regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/
+
+// atleast one upper case, one lower case, one digit, mini length to be 8 {n},{n,},{n,m}, atleast one special charchter 
+
