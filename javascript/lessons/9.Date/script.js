@@ -89,3 +89,5 @@
 // }else{
 //     console.log(`person ${person2.name} is older !`)
 // }
+
+// jan 1 1970T00:00:00

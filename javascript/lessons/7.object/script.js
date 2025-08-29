@@ -7,7 +7,6 @@ let student1 = {
     subjects: ["Math", "Java"]
 }
 
-
 let student2 = {
     name: "Rohit Kumar",
     phone: 8857032120,
@@ -48,6 +47,7 @@ let students = [
 // // destructuring of array and objects
 
 // let array = [1, 2, 3, 4]
+// array[0]
 // let object = { key1: "value1", key2: "value2" }
 
 // let [a, b, c, d] = array
@@ -73,7 +73,6 @@ let response = {
     status: true,
     output: [5, 4, 6]
 }
-
 
 function checkTask(response) {
     let { status, output } = response
