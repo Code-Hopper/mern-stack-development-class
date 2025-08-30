@@ -17,7 +17,7 @@ let async1 = setInterval(() => {
 setTimeout(() => {
     console.log("this is setTimeout !")
     clearInterval(async1)
-}, [10000])
+},[10000])
 
 console.log(4)
 console.log(5)
