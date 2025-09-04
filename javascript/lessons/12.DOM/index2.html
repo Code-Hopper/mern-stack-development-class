@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #element1 {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        #ball {
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.5s ease;
+        }
+
+        #color{
+            font-size: 5rem;
+            font-weight: bolder;
+            border: 1px solid white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form id="form1">
+        <input id="if1" name="if1" type="text">
+        <input id="if2" name="if2" type="text">
+        <input id="if3" name="if3" type="text">
+        <input id="if4" type="range" max="100" min="0" step="10">
+        <button type="submit">submit</button>
+    </form>
+    <h1>JavaScript Events</h1>
+    <button id="btn1">Click here !</button>
+
+    <div id="element1">
+        <span id="color"></span>
+    </div>
+
+    <input id="colorInput1" value="0" name="red" max="255" min="0" steps="255" type="range">
+    <label for="">Red</label>
+    <input id="colorInput2" value="0" name="green" max="255" min="0" steps="255" type="range">
+    <label for="">Green</label>
+    <input id="colorInput3" value="0" name="blue" max="255" min="0" steps="255" type="range">
+    <label for="">Blue</label>
+
+
+
+</body>
+<script src="./dom_manipulation/events.js"></script>
+
+</html>

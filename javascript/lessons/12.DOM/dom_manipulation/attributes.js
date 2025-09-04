@@ -71,3 +71,5 @@ console.log(container)
 function doSomething() {
     container.setAttribute("class", "container-class-1 first")
 }
+
+document.getElementById("i1").setAttribute("type","color")
