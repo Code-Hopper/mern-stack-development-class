@@ -132,3 +132,7 @@ window.addEventListener("resize",()=>{
 window.onresize = ()=>{
     console.log('window has been resized !')
 }
+
+window.addEventListener("unload",()=>{
+    console.log('window content un-loaded !')
+})
