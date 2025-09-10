@@ -11,24 +11,82 @@
             width: 200px;
             height: 200px;
             background-color: red;
-            display: none;
-        }
-
-        #element1.hide {
-            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
         }
 
         #element1.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #updateContainer {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, .5);
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        #updateContainer.active {
             display: block;
         }
+
+        .updateForm {
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #updateClose{
+            background-color: red;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            border: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            transform: translate(-50%,-50%);
+        }
+
     </style>
 
 </head>
 
 <body>
+    <!-- <div id="element1" class=""></div>
+    <button id="btn1">toggle show/hide</button> -->
 
-    <div id="element1" class=""></div>
-    <button id="btn1">toggle show/hide</button>
+    <form id="form1">
+        <input placeholder="enter name" type="text" name="name">
+        <input placeholder="enter phone" type="tel" name="phone">
+        <input placeholder="enter email" type="email" name="email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <table id="table1" border="1">
+    </table>
+
+    <div id="updateContainer" class="">
+        <div class="updateForm">
+            <button id="updateClose">X</button>
+            <form action="">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </form>
+        </div>
+    </div>
+
 
 </body>
 <script src="./script.js"></script>
