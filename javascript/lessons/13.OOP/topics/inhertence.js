@@ -72,6 +72,10 @@ class sedan extends car {
         super(name, wheels, doors, seats, color)
     }
 
+    getInfo(type) {
+        console.log(`${this.name} is of ${this.type} !`)
+    }
+
     doSedanStuff() {
         console.log(`${this.name} doing sedan stuff`)
     }
@@ -95,7 +99,7 @@ let brezza = new suv("Brezza ZXI", 4, 4, 5, "red")
 
 virtusGT.getInfo()
 
-virtusGT.doSedanStuff()
+// virtusGT.doSedanStuff()
 
-brezza.getInfo()
-brezza.doSUVStuff()
+// brezza.getInfo()
+// brezza.doSUVStuff()
