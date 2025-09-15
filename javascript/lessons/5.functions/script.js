@@ -86,3 +86,12 @@
 // newFuntion(false)
 
 // to convert all example from statement to a reusable module/function 
+
+function countDown(n) {
+    if (n < 10) {
+        console.log(n)
+        countDown(n + 1)
+    }
+}
+
+countDown(1)

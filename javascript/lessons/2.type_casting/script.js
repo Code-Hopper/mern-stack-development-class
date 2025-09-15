@@ -70,3 +70,21 @@ console.log("data is : " + data + " it's data type is : " + typeof (data))
 // console.log(typeof(num2))
 
 // console.log(num1 + num2)
+
+let someData = 123.321
+
+someData = someData.toString()
+someData = String(someData)
+
+someData = Boolean(someData)
+// 0 - false, else true
+
+someData = parseInt(someData)
+
+someData.toFixed(0)
+// will convert the data into string
+123
+
+let otherData = "123"
+
+otherData = Number(otherData)

@@ -56,3 +56,5 @@
 let element = document.querySelector("#container1 > h1")
 // let element = document.querySelectorAll("#container1 > h1")
 console.log(element)
+
+document.createTextNode()
