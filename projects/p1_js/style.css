@@ -81,6 +81,10 @@
 
 .main-grid>.grid-item {
     background-color: black;
+    font-size: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .result {
