@@ -25,12 +25,11 @@
             transition: all 0.5s ease;
         }
 
-        #color{
+        #color {
             font-size: 5rem;
             font-weight: bolder;
             border: 1px solid white;
         }
-
     </style>
 
 </head>
@@ -59,8 +58,22 @@
     <label for="">Blue</label>
 
 
+    <!-- <div id="element1" data-item-1="something" data-item-value="kuch-bhi">hello</div> -->
+    <!-- solve this -->
+
+    <button id="btn123" data-item-value="123" data-value-1="hello" data-something="anything">click here</button>
+
 
 </body>
-<script src="./dom_manipulation/events.js"></script>
+<!-- <script src="./dom_manipulation/events.js"></script> -->
+
+<script>
+    let target = document.getElementById("element1")
+
+    console.log(target.dataset)
+
+    console.log(document.querySelector("#btn123").dataset.something)
+
+</script>
 
 </html>
