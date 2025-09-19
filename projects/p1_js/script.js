@@ -80,3 +80,7 @@ function checkDraw() {
     if (result) result = "game drawn !"
     return result
 }
+
+//phase-1: html css bootstrap javascript(client side) [localstorage(get,set,remove), sessionstorage]
+//phase-2: server(API, File, Mail)[routes, router, auth, encryption, api calls] side javascript, mongodb(database[CRUD])
+//phase-3: react.js(UI), deployment
