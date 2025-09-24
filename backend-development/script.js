@@ -4,7 +4,7 @@ console.log("hello " + "world")
 
 let data = 100
 
-console.log(data) 
+console.log(data)
 
 // console.log(document)
 
@@ -44,3 +44,6 @@ console.log(data)
 // 300 - 399 redirection
 // 400 - 499 client error (404)
 // 500 - 599 server error
+
+// JSON - JavaScript Object Notation
+// API - 
