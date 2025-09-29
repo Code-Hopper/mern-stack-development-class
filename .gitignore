@@ -2,3 +2,6 @@ extra-data
 
 /backend-development/server1/node_modules
 /backend-development/server1/package-lock.json
+
+/backend-development/server2/node_modules
+/backend-development/server2/package-lock.json
