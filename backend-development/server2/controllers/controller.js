@@ -22,6 +22,22 @@ const postFormData = (req, res) => {
     res.status(301).redirect("/")
 }
 
-export { getHome, getAbout, getContact, postFormData }
+const postSomeInformation = (req, res) => {
+    console.log(req)
+    let {data} = req.headers
+    // req.body
+    // req.query
+    // req.params
+    // req.headers
+    console.log(data)
+
+    let {yourName} = req.params
+
+    res.status(202).json({ message: 'reached some-information route !' })
+}
+
+export { getHome, getAbout, getContact, postFormData, postSomeInformation }
 
 // form, routes(query parameters, path parameter), json()
+
+// api client | react ui | postman | thunder client
