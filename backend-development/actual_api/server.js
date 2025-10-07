@@ -1,7 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
 import { router } from "./routers/router.js"
-import { introController } from "./controllers/introController.js"
 
 dotenv.config({ path: "./config.env" })
 
@@ -15,7 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(express.json())
 
-app.use("/", introController)
+app.get("/",(req,res)=>{res.status(301).redirect("/api/techs/learn-api")})
 
 app.use("/api/techs", router)
 
