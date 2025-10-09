@@ -19,7 +19,7 @@ const introToAPI = async (req, res) => {
             {
                 title: "You can filter languages based on Scope, Difficulty, Duration",
                 method: "GET",
-                url: "http://localhost:5012/api/techs?scope=***&difficulty=***&duration=***",
+                url: "http://localhost:5012/api/techs/filter?scope=***&difficulty=***&duration=***",
                 expectedResult: "object/[objects]/null",
                 expectedFilter: [
                     {
@@ -58,4 +58,47 @@ const getRandomLanguage = (req, res) => {
     res.status(200).json({ message: "you a random language for you !", tech })
 }
 
-export { introToAPI, getAllLanguages, getRandomLanguage }
+const getFilteredData = (req, res) => {
+    try {
+
+        let { scope, difficulty, duration } = req.query
+
+        if (!scope && !difficulty && !duration) throw ("invalid filters. please add Scope, Difficulty, Duration as filters")
+
+        let filteredData = techs
+
+        let filterString = ''
+
+        if (difficulty) {
+            filterString += "/difficulty"
+            filteredData = filteredData.filter((data) => {
+                return data.difficulty.toLowerCase() === difficulty.toLowerCase().trim()
+            })
+        }
+
+        if (duration) {
+            filterString += "/duration"
+            filteredData = filteredData.filter((data) => {
+                let durationArray = data.duration.split(" ")
+                return Number(durationArray[0]) <= Number(duration.toLowerCase().trim())
+            })
+        }
+
+        if (scope) {
+            filterString += "/scope"
+            filteredData = filteredData.filter((data) => {
+                return data.scope.some((item) => { return item.toLowerCase() === scope.toLowerCase().trim() })
+            })
+        }
+
+        if (filteredData.length == 0) throw (`unable to filter data based on ${filterString} : ${scope}/${difficulty}/${duration} months`)
+
+        res.status(200).json({ message: "we got data you asked for !", filteredBaseOn: filterString, results: filteredData.length, filteredData })
+
+    } catch (err) {
+        console.log("error while filter : ", err)
+        res.status(500).json({ message: "unable to get filter data", result: null, err })
+    }
+}
+
+export { introToAPI, getAllLanguages, getRandomLanguage, getFilteredData }
