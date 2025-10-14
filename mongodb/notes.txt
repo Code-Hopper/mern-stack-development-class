@@ -1,0 +1,70 @@
+create
+
+use command is used for switching into/creating a new database
+
+use data_name
+
+database
+
+collections
+
+db.createCollection("collection_name")
+
+document
+
+db.collection.insertOne({name: "person1", phone: 9766696550, age: 23, address: "nagpur"})
+
+show collections
+show dbs
+
+db.students.insertOne(
+    {
+        _id: 3,
+        name: "student3",
+        phone : 8237895726,
+        age : 23,
+        address: {
+            street: "plot 4, sharda layout",
+            city: "nagpur",
+            pincode: "440024",
+            state: "Maharashtra"
+        }
+    }
+) 
+
+db -> ecommerce website
+
+customers
+
+db.customers.insertMany([
+    { _id: 1, name: "amey khondekar", phone: "9766696550", address: "sakkaradhara" },
+    { _id: 2, name: "Mrunal Ghotekar", phone: "8857032120", address: "Dighori" },
+    { _id: 3, name: "Sahil Kumar", phone: "8237895726", address: "Manewada" }
+])
+
+products
+
+db.products.insertMany([
+    {_id:11, name : "pencil", stock: 100, selling_price : 20, discont: 5},
+    {_id:12, name : "pen", stock: 100, selling_price : 30, discont: 5},
+    {_id:13, name : "200 Pages Book", stock: 100, selling_price : 45, discont: 5},
+    {_id:14, name : "Marker", stock: 100, selling_price : 35, discont: 5}
+])
+
+orders
+
+db.orders.insertOne({
+    _id: 42, 
+    boughtBy: {customerId: 1},
+    products:[
+        {productId: 11, qty: 2, subTotal : 95},
+        {productId: 14, qty: 1, subTotal : 97.5}
+    ],
+    shipingAddress: {
+        street: "plot 4, sharda layout",
+        city: "nagpur",
+        pincode: "440024",
+        state: "Maharashtra"
+    },
+    timeStamp: Date.now()
+})
