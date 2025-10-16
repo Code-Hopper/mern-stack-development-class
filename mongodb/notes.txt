@@ -136,3 +136,43 @@ db.products.find({ $or :[ {selling_price:  20} , {selling_price : {$gte:35}} ]})
 find({query},{projection}).count()
 find({query},{projection}).limit(number)
 find({query},{projection}).sort({field: -1(decending)/1(Ascending)}))
+
+array oprators
+
+db.languages.find({ 
+  scope:"Web Development"
+})
+
+db.languages.find({ 
+  $or : [{scope:"Web Development"},{scope:"Enterprise Apps"}]
+})
+
+studentData{
+  name:"student1",
+  roll: 1,
+  subjects: [
+    {name:"english", score: 50},
+    {name:"maths", score: 40},
+    {name:"science", score: 45},
+    {name:"history", score: 48},
+  ]
+}
+
+db.students.find(
+  {
+    subjects : { 
+      $elemMatch : {
+        name: {$eq : "english"}, 
+        score: {$gt : 60}
+      }
+    }
+  }
+)
+
+will return fields whos subjects array consits of field(object) that contains name and score  
+
+db.students.find({"subjects.name" : "english"})
+
+db.students.find({
+  subjects: {$elemMatch: {name: "english"}}
+})
