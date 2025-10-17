@@ -69,7 +69,7 @@ db.orders.insertOne({
     timeStamp: Date.now()
 })
 
-read
+Read
 
 db.collection.findOne() -> null / object
 db.collection.find() -> [] / [object/s]
@@ -123,7 +123,6 @@ db.products.find({selling_price: {$in: [20, 35]}})
   }
 ]
 
-
 logical oprators
 
 $and
@@ -176,3 +175,25 @@ db.students.find({"subjects.name" : "english"})
 db.students.find({
   subjects: {$elemMatch: {name: "english"}}
 })
+
+Update
+
+$set(will create a new/update a  filed), $unset(remove a field)
+
+db.collection.updateOne/Many({})
+
+db.languages.find({
+  scope : {
+    $size: {$ne:3}
+  }
+})
+
+db.languages.updateMany({
+  scope : {$not: {$size : 3} }
+},{$unset: {rating : 0}})
+
+Delete
+
+db.languages.deleteOne({})
+
+db.languages.deleteMany({})
