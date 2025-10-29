@@ -1,5 +1,10 @@
 import mongoose from "mongoose";
 
+let addressObject = {
+    street: "", city: "", state: "", country: "", pincode: ""
+}
+
+
 let userSchema = mongoose.Schema({
     name: {
         type: String
@@ -11,8 +16,18 @@ let userSchema = mongoose.Schema({
         type: String
     },
     address: {
-        type: Object
+        type: Object,
+        default: addressObject
+    },
+    timeStamp: {
+        type: String,
+        // default: Date.now()
+        // UTC -> IST(UTC+5:30Hr)
     }
+})
+
+userSchema.pre("save", function () {
+    this.timeStamp = Date.now()
 })
 
 let UserModel = new mongoose.model("users", userSchema)
@@ -24,3 +39,5 @@ export { UserModel }
 // UserModel.findOne()/find()
 // UserModel.updateOne()/updateMany()
 // UserModel.deleteOne()/deleteMany()
+
+// NoSQL | Schema (Refference/Single Document)
