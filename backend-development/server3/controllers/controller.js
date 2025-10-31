@@ -12,6 +12,12 @@ const PostRegisterUser = async (req, res) => {
 
         if (!name || !phone || !email || !address) throw ("invalid/missing data !")
 
+        // check if user exits
+
+        let userExist = await UserModel.findOne({ $or: [{ "email": email }, { "phone": phone }] })
+
+        if (userExist) throw ("duplicate phone/email address !")
+
         // register the user
 
         let newUser = new UserModel({ name, phone, email, address })

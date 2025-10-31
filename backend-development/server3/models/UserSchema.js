@@ -4,7 +4,6 @@ let addressObject = {
     street: "", city: "", state: "", country: "", pincode: ""
 }
 
-
 let userSchema = mongoose.Schema({
     name: {
         type: String
@@ -23,6 +22,9 @@ let userSchema = mongoose.Schema({
         type: String,
         // default: Date.now()
         // UTC -> IST(UTC+5:30Hr)
+    },
+    marks: {
+        type: Number
     }
 })
 
