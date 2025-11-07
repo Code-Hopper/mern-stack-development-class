@@ -1,5 +1,5 @@
 import { userModel } from "../models/userSchema.js"
-
+import { redisClient } from "../utils/redisConfig.js";
 import nodemailer from "nodemailer"
 
 
@@ -28,11 +28,17 @@ let sendEmail = async (email) => {
             subject: "test otp email !",
             html: `
                 <h1>your otp is <span style="color:red;">${otp}</span> </h1>
+                <p>this otp is valid for 5 mins.</p>
             `
         })
+
         console.log(result)
 
         console.log("an email has been sent !")
+
+        // store user otp in redis for verification
+
+        redisClient.set(`user.${email}`, otp, 300)
 
         return result
 
@@ -73,10 +79,44 @@ let postHandleUserRegister = async (req, res) => {
     }
 }
 
-export { postHandleUserRegister }
+const handleEmailOtp = async (req, res) => {
+    try {
+        let { email, otp } = req.body
 
-// send an otp to the email.userEmail (nodemailer)
+        if (!email || !otp) throw ("invalid data !")
 
-// verify that otp using a seprate route
+        let user = await userModel.findOne({ "email.userEmail": email })
 
-// if varified then update email.verified to be true
+        if (!user) throw ("invalid email please register first !")
+
+        let storedUserOtp = await redisClient.get(`user.${user.email.userEmail}`)
+
+        if (!storedUserOtp) throw ("invalid or expried OTP !")
+
+        if (storedUserOtp != otp) throw ("otp din't matched !")
+
+        let updateResult = await userModel.updateOne({ "email.userEmail": email }, { "email.verified": true })
+
+        if (updateResult.modifiedCount == 0) throw ("din't update any user !")
+
+        res.status(202).json({ message: "otp verified successfully !" })
+    }
+    catch (err) {
+        console.log("unable to verify otp: ", err)
+        res.status(400).json({ message: "error in OTP verification", err })
+    }
+}
+
+// password reset
+
+const handlePasswordReset = () => {
+
+}
+
+const handlePasswordResetOtp = () => {
+
+}
+
+// login
+
+export { postHandleUserRegister, handleEmailOtp, handlePasswordReset, handlePasswordResetOtp }
