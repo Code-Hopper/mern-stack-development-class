@@ -1,7 +1,8 @@
 import { userModel } from "../models/userSchema.js"
 import { redisClient } from "../utils/redisConfig.js";
 import nodemailer from "nodemailer"
-
+import bcrpyt from "bcrypt"
+import jwt from "jsonwebtoken"
 
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -10,7 +11,7 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: process.env.USER_EMAIL,
         pass: process.env.USER_EMAIL_PASSWORD,
-    },
+    }
 });
 
 let genrateOTP = () => {
@@ -119,4 +120,57 @@ const handlePasswordResetOtp = () => {
 
 // login
 
-export { postHandleUserRegister, handleEmailOtp, handlePasswordReset, handlePasswordResetOtp }
+const handleLogin = async (req, res) => {
+    try {
+
+        let { email, password } = req.body
+
+        if (!email || !password) throw ("invalid login data !")
+
+        let user = await userModel.findOne({ "email.userEmail": email })
+
+        if (!user) throw ("unable to find user please register first  !")
+
+        // compare passwords
+        // passwrod  with user.password(hashed)
+
+        let comparePassword = await bcrpyt.compare(password, user.password)
+
+        if (!comparePassword) throw ("invalid email/password !")
+
+        // genrate token from JWT
+
+        let tokenPayload = {
+            email: user.email.userEmail,
+            name: user.name
+        }
+
+        let options = {
+            expiresIn: '12h'
+        }
+
+        let token = await jwt.sign(tokenPayload, process.env.JWT_SECRET, options)
+
+        res.status(202).json({ message: "login was successfull !", token })
+
+    } catch (err) {
+        console.log("unable to login :", err)
+        res.status(400).json({ message: "login failed !", err })
+    }
+}
+
+const getUserInfo = async (req, res) => {
+    try {
+
+        let user = req.user
+
+        if (!user) throw ("no user was setup !")
+
+        res.status(200).json({ message: "got user data !", user })
+
+    } catch (err) {
+        res.status(400).json({message : "cannot send user data at this time !",err})
+    }
+}
+
+export { handleLogin, postHandleUserRegister, handleEmailOtp, handlePasswordReset, handlePasswordResetOtp, getUserInfo }
