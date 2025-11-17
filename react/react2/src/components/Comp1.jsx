@@ -1,6 +1,8 @@
 import { react } from "react"
 import Header from "./Header";
 
+import "./styles/style.scss"
+
 const Comp1 = () => {
     return (
         <>

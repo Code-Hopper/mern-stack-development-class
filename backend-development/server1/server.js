@@ -49,3 +49,14 @@ app.listen(port, () => {
 // send, sendFile, render(view engine), json
 
 // Model(Schema, Routers, Utils) View(UI,View Engine,React) Controllers
+
+// API
+
+// HTTP methods (GET(to give data) POST(to recieve) PUT(to update) PATCH(to update[only one field]) DELETE(to delete))
+
+// HTTP status code [100 - 199(informational), 200 - 299(success), 300 - 399(redirection), 400 - 499(user error), 500 - 599(server error)]
+
+// send
+// sendFile
+// json
+// render

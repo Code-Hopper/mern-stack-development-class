@@ -11,7 +11,7 @@ const authUser = async (req, res, next) => {
 
         if (!token) throw ("invalid token data !")
 
-        console.log(token)
+        // console.log(token)
 
         // decode
 

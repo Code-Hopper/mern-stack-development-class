@@ -6,13 +6,25 @@
 
 
 #header {
-    h1+div {
-        >h1 {
-            span {
+    background-color: red;
+
+    h1 {
+        background-color: black;
+
+        &+div {
+            background-color: blue;
+
+            >h1 {
+                background-color: yellow;
+
                 span {
-                    background: blue
+                    span {
+                        background: blue
+                    }
                 }
             }
         }
     }
 }
+
+// #header > h1+ div
