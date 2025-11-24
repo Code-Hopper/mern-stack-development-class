@@ -1,6 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import { router } from "./routers/router.js"
+import cors from "cors"
 
 dotenv.config({ path: "./config.env" })
 
@@ -14,7 +15,14 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(express.json())
 
-app.get("/",(req,res)=>{res.status(301).redirect("/api/techs/learn-api")})
+let corsOptions = {
+    origin: "*",
+    method: "*"
+}
+
+app.use(cors(corsOptions))
+
+app.get("/", (req, res) => { res.status(301).redirect("/api/techs/learn-api") })
 
 app.use("/api/techs", router)
 

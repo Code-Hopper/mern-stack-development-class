@@ -65,7 +65,7 @@ const getFilteredData = (req, res) => {
 
         if (!scope && !difficulty && !duration) throw ("invalid filters. please add Scope, Difficulty, Duration as filters")
 
-        let filteredData = techs
+        let filteredData = ""
 
         let filterString = ''
 
@@ -137,3 +137,5 @@ const postNewLanguage = (req, res) => {
 }
 
 export { introToAPI, getAllLanguages, getRandomLanguage, getFilteredData, getLanguageBasedOnId, postNewLanguage }
+
+{$elemMatch : { scope : { $eq : "web development" } }}
