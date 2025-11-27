@@ -32,8 +32,15 @@ const AddLanguages = (props) => {
 
         console.log(language)
 
-        props.setLanguagesArray((prev)=>{
+        props.setLanguagesArray((prev) => {
             return [...prev, language]
+        })
+
+        setLanguageForm({
+            name: '',
+            difficulty: '',
+            duration: 0,
+            scope: ''
         })
 
     }
