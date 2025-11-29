@@ -10,9 +10,11 @@ const DisplayLanguagesData = () => {
     const fetchData = async () => {
         try {
 
+            // fetch api
+
             let result = await axios({
                 method: "GET",
-                url: "http://localhost:5012/api/techs/all-languages"
+                url: "http://localhost:5012/api/techs/all-languages",
             })
 
             console.log(result)
@@ -26,6 +28,7 @@ const DisplayLanguagesData = () => {
             setTechs(result.data.techs)
 
         } catch (err) {
+            // err.respnose.message
             console.log("error while fetching data from backend  : ", err)
         }
     }
