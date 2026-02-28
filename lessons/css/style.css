@@ -1,0 +1,86 @@
+/* h1 {
+    color: red;
+} */
+
+/* tagname */
+
+/* tagname{
+        property: value
+    } */
+
+h2 {
+    color: green;
+}
+
+li {
+    color: purple;
+}
+
+/* classname */
+
+/* .classname */
+
+.first {
+    color: orange;
+}
+
+.kuchaur {
+    color: pink;
+}
+
+.second {
+    background-color: black;
+}
+
+.third {
+    text-decoration: underline;
+}
+
+/* id */
+
+/*  #id */
+
+#i2 {
+    color: brown;
+}
+
+#i3 {
+    color: brown;
+}
+
+/* universal */
+
+* {
+    color: yellowgreen;
+}
+
+h1 {
+    color: red;
+}
+
+.newClass1 {
+    color: rgb(138, 43, 226);
+}
+
+#i4 {
+    /* color: rgba(0,255,255,0.5); */
+    color: rgb(35, 134, 54);
+}
+
+/* inline css << id << class << tagname << universal */
+
+/* color formats */
+/* solid color, hex, rgb, rgba */
+
+/* hex -> #000000  black*/
+/* hex -> #ffffff white*/
+
+/*
+red : 100%
+green : 100%
+blue 
+*/
+
+/* rgb(0,0,0) */
+
+/* units */
