@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- flex is a single dimensional layout -->
+
+    <style>
+        .parent {
+            width: 620px;
+            height: 600px;
+            border: 5px solid black;
+            margin: 0 auto;
+            display: flex;
+
+            /* flex properties */
+            flex-direction: row;
+            /* row column row-reverse column-reverse */
+            gap: 10px;
+            /* unit value */
+
+            justify-content: center;
+            /* for horizontal alignment */
+            /* start end center space-between space-evenly space-around */
+
+            align-items: center; 
+            /* for vertical alignment */
+            /* start end center stretch*/
+
+            /* if direction is row then justify-contnet will do horizontal alignment and align-items do vertical alignment else if direction is column then justify-content will do vertical alignment and aling-items do horizontal alignment*/
+
+            flex-wrap: wrap;
+            /* no-wrap wrap */
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child c1">
+            <span>c1</span>
+        </div>
+        <div class="child c2">
+            <span>c2</span>
+        </div>
+        <div class="child c3">
+            <span>c3</span>
+        </div>
+        <div class="child c4">
+            <span>c4</span>
+        </div>
+        <div class="child c5">
+            <span>c5</span>
+        </div>
+        <div class="child c6">
+            <span>c6</span>
+        </div>
+    </div>
+</body>
+
+</html>
