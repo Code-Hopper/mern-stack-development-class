@@ -8,18 +8,23 @@
 
     <style>
         .parent {
-            width: 616px;
-            height: 616px;
+            width: 600px;
+            height: 600px;
             border: 1px solid black;
             margin: 10rem auto;
             display: grid;
-            grid-template-columns: 200px 200px 200px;
-            grid-template-rows: 200px 200px 200px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
             gap: .5rem;
             justify-items: stretch;
             align-items: stretch;
             /* start end center stretch */
+            font-size: 5px;
         }
+
+        /* 1fr->1/3 1fr-> 1/3 1fr-> 1/3 */
+
+        /* 1/3-30% 2/3-40% 1/3-30% */
 
         .child {
             background-color: red;
@@ -31,13 +36,93 @@
         }
 
         .child1 {
-            grid-column: 1 / 3;
+            /* grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            /* grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4; */
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+            /* grid-column: start / end; */
+
+            /* width: 100px;
+            height: px; */
         }
+
+        .child2 {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+        }
+
+        .child6 {
+            width: 100px;
+            height: 100px;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .keypad {
+            width: 316px;
+            height: auto;
+            margin: 10rem auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: .5rem;
+        }
+
+        .key {
+            height: 100px;
+            background: linear-gradient(rgba(128, 128, 128, 0.5), white, rgba(128, 128, 128, 0.5));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            border-radius: 14px;
+        }
+
+        .key-call{
+            background: green !important; 
+            color: white;
+            border-radius: 100%;
+        }
+
+        .key-0 {
+            /* grid-column: 2 / 3; */
+        }
+
+        .key:hover{
+            background-color: red;
+        }
+
     </style>
 
 </head>
 
 <body>
+
+    <div class="keypad">
+        <div class="key key-1">1</div>
+        <div class="key key-2">2</div>
+        <div class="key key-3">3</div>
+        <div class="key key-4">4</div>
+        <div class="key key-5">5</div>
+        <div class="key key-6">6</div>
+        <div class="key key-7">7</div>
+        <div class="key key-8">8</div>
+        <div class="key key-9">9</div>
+        <div class="key key-call">Call</div>
+        <div class="key key-0">0</div>
+        <div class="key key-*">*</div>
+    </div>
+
+
+
     <div class="parent">
         <div class="child child1">child1</div>
         <div class="child child2">child2</div>
@@ -46,8 +131,8 @@
         <div class="child child5">child5</div>
         <div class="child child6">child6</div>
         <div class="child child7">child7</div>
-        <!-- <div class="child child8">child8</div>
-        <div class="child child9">child9</div> -->
+        <div class="child child8">child8</div>
+        <div class="child child9">child9</div>
     </div>
 </body>
 
