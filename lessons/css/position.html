@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent1 {
+            display: inline-block;
+            border: 1px solid black;
+        }
+
+        .parent2 {
+            /* display: inline-block; */
+            width: fit-content;
+            border: 1px solid black;
+            /* margin-top: 10rem; */
+        }
+
+        .item1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            /* static(default), relative, absolute, fixed, sticky */
+
+            /* relative : in relation with the origin position of an element the relative position will change */
+
+            top: 100px;
+            /* right: 0; */
+            /* bottom: 0; */
+            left: 50px;
+            z-index: 3;
+        }
+
+        .item2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            top: 100px;
+            left: 50px;
+            z-index: 11;
+        }
+
+        .item3{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            top: 200px;
+            left: 150px;
+            z-index: 10;
+        }
+
+        /* z-index */
+
+    </style>
+
 </head>
+
 <body>
-    
+    <div class="parent1">
+        <div class="item1"></div>
+    </div>
+    <div class="parent2">
+        <div class="item2"></div>
+    </div>
+    <div class="item3"></div>
 </body>
+
 </html>
