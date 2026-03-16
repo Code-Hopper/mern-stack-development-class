@@ -12,6 +12,10 @@
             padding: 0;
         }
 
+        body {
+            height: 300vh;
+        }
+
         .parent1 {
             display: inline-block;
             border: 1px solid black;
@@ -50,7 +54,7 @@
             z-index: 11;
         }
 
-        .item3{
+        .item3 {
             width: 200px;
             height: 200px;
             background-color: green;
@@ -62,6 +66,23 @@
 
         /* z-index */
 
+        .item4 {
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            z-index: 12;
+        }
+
+        .item5 {
+            width: 500px;
+            height: 200px;
+            background-color: orange;
+            position: sticky;
+            top: 0px;
+        }
     </style>
 
 </head>
@@ -74,6 +95,16 @@
         <div class="item2"></div>
     </div>
     <div class="item3"></div>
+    <div class="item4"></div>
+    <div class="item5"></div>
 </body>
 
 </html>
+
+<!-- phase 1 -->
+<!-- color, background, layouts(flex, grid), display, position, spacing(margin, padding, border[outline]), variable unit (em and rem), text and font -->
+
+<!-- create something -->
+
+<!-- phase 2 -->
+<!-- RWD[media query], transformation, transition and animation -->
