@@ -1,0 +1,65 @@
+<!-- Responsive Web Design -->
+<!-- max and min (height/width) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 500px;
+            min-height: 500px;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 576px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media screen and (min-width: 576px) and (max-width:990px) {
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, explicabo voluptate. Eos animi voluptas
+            et necessitatibus nostrum aspernatur voluptatibus dolorem perspiciatis! Fuga quae culpa velit asperiores ab,
+            molestiae quisquam quasi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, explicabo voluptate. Eos animi voluptas
+            et necessitatibus nostrum aspernatur voluptatibus dolorem perspiciatis! Fuga quae culpa velit asperiores ab,
+            molestiae quisquam quasi!
+        </h1>
+    </div>
+</body>
+
+</html>
+
+<!-- max-(height/width) works by setting a max value for height and once that max value is hit the element will not extened further. initial height would depends on content -->
+
+<!-- min-(height/width) works by setting a min value for height/width and once content reaches min value the demensions will be extended -->
+
+<!-- Break Points -->
+
+<!-- width -->
+
+<!-- max-width < 576px = mobile device -->
+
+<!-- 990px > max-width < 576px  = tablet device -->
+
+<!-- min-width > 990px = desktop/laptop device -->
+
+<!-- create a div with grid layout -->
+<!-- have 9 child within the div -->
+<!-- make dekstop view 9 columns and 1 row -->
+<!-- make tablet view 3 columns and 3 rows -->
+<!-- make mobile view 2 columns and 5 rows -->
