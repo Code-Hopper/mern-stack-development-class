@@ -8,29 +8,141 @@
 </head>
 
 <style>
-    .i1 {
-        width: 200px;
-        height: 200px;
+    /* div span {
+        color: green;
+    }
+
+    span {
+        color: red;
+    }
+
+    div>div>span {
+        color: blue;
+    } */
+    li:first-child {
+        color: red;
+    }
+
+    li:last-child {
+        color: blue;
+    }
+
+    li:nth-child(2) {
+        color: orange;
+    }
+
+    p:first-child {
+        color: red;
+        font-weight: bold;
+        font-size: .5rem;
+    }
+
+    p:hover {
         background-color: red;
     }
 
-    div>div>.i1 {
-        background-color: black;
+    div p+p {
+        color: green;
+    }
+
+    div>h1+h3 {
+        color: red;
+    }
+
+    div>h1~h3 {
+        color: orange;
     }
 </style>
 
 <body>
+    <!-- <div>
+        <span>this is span 1</span>
+        <span>this is span 2</span>
+    </div>
+    <span>this is span 3</span>
+    <span>this is span 4</span>
     <div>
         <div>
-            <div class="i1"></div>
+            <div>
+                <div>
+                    <h1>
+                        <a href="">
+                            <span>this is span 5</span>
+                        </a>
+                    </h1>
+                </div>
+            </div>
         </div>
     </div>
+    <div>
+        <div>
+            <h1>
+                <div>
+                    <div>
+                        <span>this is target</span>
+                    </div>
+                </div>
+            </h1>
+        </div>
+    </div> -->
 
-    <!-- div > div > .i1 -->
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
 
-    <div class="i1">
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+    </ul>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laborum perspiciatis voluptatum possimus
+            magnam
+            reiciendis eum dolorum beatae, sit sint fuga repellendus blanditiis. Eius earum minima corrupti optio quas
+            aliquid.z</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptate maxime aliquam, est deleniti minus
+            ex
+            quidem veniam quas non ab voluptatem perspiciatis, animi assumenda facilis necessitatibus, hic explicabo.
+            Fugiat.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, fugiat!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, fugiat!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, fugiat!</p>
+
+    </div>
+
+    <div>
+        <span>hello</span>
+        <h1>world</h1>
+        <span>addition</span>
+        <h3>javascript</h3>
     </div>
 
 </body>
 
 </html>
+
+<!-- *, tagname, class name, id -->
+<!-- hierarchichal slector -->
+<!-- element element ... element{ } -->
+<!-- direct chld selector -->
+<!-- pseudo selectors -->
+<!-- :nth-child, :last-child, :first-child,:hover -->
+<!-- sibling selectors (adjustent + and alternet ~) -->
