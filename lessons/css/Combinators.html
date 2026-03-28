@@ -52,9 +52,73 @@
     div>h1~h3 {
         color: orange;
     }
+
+    .i1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+    }
+
+    .i1::after {
+        content: "";
+        display: inline-block;
+        width: 0px;
+        height: 20px;
+        background-color: yellow;
+        position: absolute;
+        /* left: 100%; */
+        bottom: 0;
+        transition: all 0.5s cubic-bezier(.84, -0.44, .56, 1.57);
+    }
+
+    .i1:hover::after {
+        width: 100%;
+    }
+
+    .i1::before {
+        content: "";
+        display: inline-block;
+        width: 0px;
+        height: 20px;
+        background-color: green;
+        position: absolute;
+        /* left: 100%; */
+        /* bottom: 0; */
+        transition: all 0.5s ease;
+        /* filter:(0); */
+    }
+
+    .i1:hover::before {
+        width: 100%;
+    }
+
+    .parent {
+        width: 402px;
+        height: 402px;
+        background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+    }
 </style>
 
 <body>
+    <div class="i1"></div>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
     <!-- <div>
         <span>this is span 1</span>
         <span>this is span 2</span>
@@ -141,8 +205,27 @@
 
 <!-- *, tagname, class name, id -->
 <!-- hierarchichal slector -->
+<!-- element, element -->
 <!-- element element ... element{ } -->
 <!-- direct chld selector -->
 <!-- pseudo selectors -->
 <!-- :nth-child, :last-child, :first-child,:hover -->
 <!-- sibling selectors (adjustent + and alternet ~) -->
+
+<!-- pseudo elements -->
+<!-- ::after ::before -->
+
+<!-- type of css -->
+<!-- color-hex rgb rgba -->
+<!-- background properties | gredient -->
+<!-- display -->
+<!-- layout flex grid  -->
+<!-- position -->
+<!-- selectors -->
+<!-- pseudo selector  -->
+<!-- pseudo elements -->
+<!-- rwd -->
+<!-- transform -->
+<!-- transform 3d -->
+<!-- transition -->
+<!-- animation -->
