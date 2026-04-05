@@ -218,3 +218,49 @@ body {
 }
 
 /* heros ends */
+
+.logo-container {
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+.box {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    /* background-color: black; */
+}
+
+.box img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    filter: invert(0) grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.box img:hover {
+    filter: invert(0) grayscale(0);
+}
+
+.i1{
+    position: relative;
+}
+
+.i1::before {
+    content: "hello1";
+    position: absolute;
+    bottom: 100%;
+}
+
+.i1::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: red;
+    top: 100%;
+    left: 0;
+}
