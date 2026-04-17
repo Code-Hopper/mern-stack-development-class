@@ -1,0 +1,7 @@
+Javascript is higher level programming language. It is interperted.
+Javascript is used in web scriting, server (REST), mobile application(using React Native), Desktop application (Electron)
+we can run Javascript 2 ways 
+    1. using a client web browser (client-side)
+    2. using node.js(runtime env) (server-side)
+Dynamic typed language (data type is determined in the runtime).
+Their are various frameworks and libraries that are written using Javascript to create/work UI/SERVER/MOBILE APPs (React, Express, React Native)
