@@ -4,4 +4,30 @@ we can run Javascript 2 ways
     1. using a client web browser (client-side)
     2. using node.js(runtime env) (server-side)
 Dynamic typed language (data type is determined in the runtime).
-Their are various frameworks and libraries that are written using Javascript to create/work UI/SERVER/MOBILE APPs (React, Express, React Native)
+Their are various frameworks and libraries that are written using Javascript to create/work UI/SERVER/MOBILE APPs (React, Express, React Native).
+
+
+code 
+
+syntax:
+    OOP and POP
+
+variable
+    Empty Boxes -> name -> value/data
+
+    scope name = value/data;
+
+var(public), let(protected) and const(protected | immutable)
+
+let age = 23; -> number
+let name = "amey khondekar"; -> string
+let pass = true; -> boolean
+
+value/data: 
+
+    data types 
+        1. primitive (number[int[4bytes], float[4bytes], double[8bytes]], string(group of chars[1byte]), boolean[1byte](single value true/false), undefined, NaN)
+        2. non primitive (array, object, function, etc.)
+
+    RAM
+        address
