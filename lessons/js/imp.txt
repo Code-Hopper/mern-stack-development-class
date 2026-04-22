@@ -31,3 +31,28 @@ value/data:
 
     RAM
         address
+
+oprators:
+
+    1. airthmatic oprators : +, -, *, /, % 
+    2. increement and decrement oprators  : pre/post --(-1), ++(+1)
+    3. comparaision oprators : < , > , <=, >=, !=, ==, ===
+    4. logical oprators : && AND, || OR
+    5. assignment oprators: =, +=,-=,/=, *=, %=
+    6. ternary oprator : ? (ternary statements)
+    7. member access oprator : " . "
+
+statements | expresions
+
+input/output statements
+
+Javascript it has built in input and output methods
+
+output : console.log, window.alert, document.write, etc.. 
+input : window.prompt
+
+conditional statements
+
+how to run js program. client side (using browser), server side(using node.js)
+
+in Javascript document means the html page where it is connected !
