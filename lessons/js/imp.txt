@@ -23,6 +23,10 @@ let age = 23; -> number
 let name = "amey khondekar"; -> string
 let pass = true; -> boolean
 
+naming rules for a variable
+
+1. name has to unique | 2. their should be no special charch or spaces in between and name can be alpha numeric but cannot start with a number.(exception is " _ ")
+
 value/data: 
 
     data types 
