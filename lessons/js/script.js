@@ -176,8 +176,114 @@
 // if, if-else,nasted if, if-else if, switch case, ternary statement
 // for, while, do_while
 
-if(condition){
-    statement
-}else if(condition){
-    statement
-}
+// if(condition){
+//     statement
+// }else if(condition){
+//     statement
+// }
+
+// if(condition){
+//     // 
+// }
+
+// let age = 12;
+
+// if(age > 18){
+//     console.log("you can drive !")
+// }
+
+// // next line
+// console.log("program completed !")
+
+// if-else
+
+// let age = 18
+
+// if (age >= 18) {
+//     console.log("you can drive !")
+// } else {
+//     console.log("you cannot drive !")
+// }
+
+// let age = 19
+// let license = true
+// let ownVehical = true
+
+// // check age => if true > check license
+// // check age => if false > cannot drive
+
+// if (age > 18) {
+//     if (license) {
+//         if (ownVehical) {
+//             console.log("you can drive")
+//         } else {
+//             console.log('you cannot drive ! -1')
+//         }
+//     } else {
+//         console.log('you cannot drive ! -2')
+//     }
+// } else {
+//     console.log("you cannot drive ! -3")
+// }
+
+// console.log("program completed !")
+
+// let age = 19
+// let license = false
+// let ownVehical = true
+// let asset = true
+// let pehechan = true
+// let porchse = true
+
+// if (age > 18) {
+//     if (license) {
+//         if (ownVehical) {
+//             console.log('you can drive !')
+//         } else {
+//             console.log('you cannot drive !')
+//         }
+//     } else if (asset) {
+//         if (ownVehical) {
+//             console.log('you can drive !')
+//         } else {
+//             console.log('you cannot drive !')
+//         }
+//     }
+// } else if (pehechan) {
+//     console.log("you can drive !")
+// } else if (porchse) {
+//     console.log("you can drive !")
+// } else {
+//     console.log("you cannot drive !")
+// }
+
+// let a = 55
+// let b = 55
+// let c = 55
+// let d = 55
+
+// if (a > b) {
+//     if (a > c) {
+//         if (a > d) {
+//             console.log("a is greater of 4 numbers !")
+//         } else {
+//             console.log("d is greater of 4 numbers ! -1")
+//         }
+//     } else if (c > d) {
+//         console.log("c is greater of 4 numbers ! -1")
+//     } else {
+//         console.log("d is greater of 4 numbers ! -2")
+//     }
+// } else if (b > c) {
+//     if (b > d) {
+//         console.log("b is greater of 4 numbers !")
+//     } else {
+//         console.log("d is greater of 4 numbers ! -3")
+//     }
+// } else if (c > d) {
+//     console.log("c is greater of 4 numbers ! -2")
+// } else if (d > c) {
+//     console.log("d is greater of 4 numbers ! -4")
+// }else{
+//     console.log("all numbers are equal !")
+// }
