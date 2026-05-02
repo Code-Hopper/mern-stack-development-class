@@ -287,3 +287,5 @@
 // }else{
 //     console.log("all numbers are equal !")
 // }
+
+// switch case
