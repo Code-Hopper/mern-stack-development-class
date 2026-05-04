@@ -287,3 +287,104 @@
 // }else{
 //     console.log("all numbers are equal !")
 // }
+
+// menu driven program
+
+// switch(choice){
+//     case '1/a/something related to choice': 
+//         statement for case;
+//     break;
+//     .
+//     .
+//     .
+//     .
+//     .
+//     case n: 
+//         statement for case;
+//     break;
+//     default: 
+//         statment for default
+// }
+
+// let number1 = Number(window.prompt("enter value for number 1"))
+// let number2 = Number(window.prompt("enter value for number 2"))
+// let choice = window.prompt("enter choice 1. Add, 2. Sub 3. Mul, 4. DIv, 5.Modulas")
+
+// switch (choice) {
+//     case "1":
+//         console.log(number1 + number2)
+//         break;
+//     case "2":
+//         console.log(number1 - number2)
+//         break;
+//     case "3":
+//         console.log(number1 * number2)
+//         break;
+//     case "4":
+//         console.log(number1 / number2)
+//         break;
+//     case "5":
+//         console.log(number1 % number2)
+//         break;
+//     case "kuch bhi":
+//         console.log("kuch bhi works !")
+//         break;
+//     default:
+//         console.log("nothing matched please enter value between 1 to 5")
+// }
+
+// switch (window.prompt("enter char")) {
+//     case "a":
+//     case "e":
+//     case "i":
+//     case "o":
+//     case "u":
+//         console.log("entred char is vowel !")
+//         break;
+//     default:
+//         console.log('consolant')
+// }
+
+// ternary statement
+
+// condition ? true block : flase block
+
+// let age = 28
+
+// age > 18 ? console.log("can drive"): console.log("can't drive")
+
+// leap year
+// 0
+// every 4th year from that is leap year
+// leap year wont repeat every 100 years span
+// leap year will repeat every 400 years span
+
+// 0-4-8-12-16-20-24-........-96-104-...-196-204-296-304-...396->400->404->408----496->504---->800
+
+let year = 5000
+
+// if (year % 100 == 0) {
+//     if (year % 400 == 0) {
+//         console.log(year + " is leap year !")
+//     } else {
+//         console.log(year + " is not a leap year !")
+//     }
+// } else if (year % 4 == 0) {
+//     console.log(year + " is leap year !")
+// } else {
+//     console.log(year + " is not a leap year !")
+// }
+
+// logical oprators => AND && | OR ||
+
+// p    q  p and q
+// t    t     t
+// t    f     f
+// f    t     f
+// f    f     f
+
+if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
+    console.log('year leap !')
+}else{
+    console.log("not a leap year !")
+}
