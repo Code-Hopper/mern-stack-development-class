@@ -361,30 +361,100 @@
 
 // 0-4-8-12-16-20-24-........-96-104-...-196-204-296-304-...396->400->404->408----496->504---->800
 
-let year = 5000
+// let year = 5000
 
-// if (year % 100 == 0) {
-//     if (year % 400 == 0) {
-//         console.log(year + " is leap year !")
-//     } else {
-//         console.log(year + " is not a leap year !")
-//     }
-// } else if (year % 4 == 0) {
-//     console.log(year + " is leap year !")
-// } else {
-//     console.log(year + " is not a leap year !")
+// // if (year % 100 == 0) {
+// //     if (year % 400 == 0) {
+// //         console.log(year + " is leap year !")
+// //     } else {
+// //         console.log(year + " is not a leap year !")
+// //     }
+// // } else if (year % 4 == 0) {
+// //     console.log(year + " is leap year !")
+// // } else {
+// //     console.log(year + " is not a leap year !")
+// // }
+
+// // logical oprators => AND && | OR ||
+
+// // p    q  p and q
+// // t    t     t
+// // t    f     f
+// // f    t     f
+// // f    f     f
+
+// if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
+//     console.log('year leap !')
+// }else{
+//     console.log("not a leap year !")
 // }
 
-// logical oprators => AND && | OR ||
+// while , do_while, for
 
-// p    q  p and q
-// t    t     t
-// t    f     f
-// f    t     f
-// f    f     f
+// while(condition){
+//     // statements
+//     // updation
+// }
 
-if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
-    console.log('year leap !')
-}else{
-    console.log("not a leap year !")
+// 100
+
+// console.log(1)
+// .
+// .
+// .
+// console.log(100)
+
+// let count = 0;
+
+// while (count <= 100) {
+//     console.log(count*count)
+//     count++
+// }
+
+// do {
+//     // statement
+//     // updation
+// } while (condition)
+
+// do you to continue ?
+
+// let choice = false
+
+// do {
+
+//     let year = Number(window.prompt("enter year !"))
+
+//     if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+//         console.log('year leap !')
+//     } else {
+//         console.log("not a leap year !")
+//     }
+
+//     choice = confirm("do you wish to continue !")
+
+// }while(choice)
+
+// for
+
+// for(initilize; conditions; updation){
+//     // statement
+// }
+
+// for (let count = 0; count <= 100; count++) {
+//     console.log(count)
+// }
+
+// demensional terversing
+
+// factorial of number
+// 5! = 5*4*3*2*1 = 120
+
+let number = 9
+let fact = 1
+
+while (number != 0){
+    fact = fact * number //5 , 4//20 , 3//60,2//120,1//120,0
+    number--
 }
+
+console.log(fact)
