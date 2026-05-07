@@ -449,12 +449,65 @@
 // factorial of number
 // 5! = 5*4*3*2*1 = 120
 
-let number = 9
-let fact = 1
+// let number = 9
+// let fact = 1
 
-while (number != 0){
-    fact = fact * number //5 , 4//20 , 3//60,2//120,1//120,0
-    number--
-}
+// while (number != 0){
+//     fact = fact * number //5 , 4//20 , 3//60,2//120,1//120,0
+//     number--
+// }
 
-console.log(fact)
+// console.log(fact)
+
+// nasted loops
+
+// while(condition){
+//     while(condition){
+//         while(condition){
+//         }
+//     }
+// }
+
+
+// *****
+// *****
+// *****
+// *****
+// *****
+
+// let row = 0
+
+// while (row < 5) {
+//     let empty = 0
+//     let column = 0
+//     let paternString = ""
+//     let emptyString = ""
+
+//     while (empty < (4 - row)) {
+//         emptyString += "<span>&nbsp;&nbsp<span>"
+//         empty++
+//     }
+//     while (column <= row) {
+//         paternString += " * "
+//         column++
+//     }
+//     document.write(emptyString + paternString)
+//     document.write("<br></br>")
+//     row++
+// }
+
+// 0 0 0 0 *
+// 0 0 0 * *
+// 0 0 * * *
+// 0 * * * *
+// * * * * *
+
+// template litral
+// from year + start +to + end
+
+let name = "amey"
+let age = 24
+
+// ${}
+
+console.log(`my name is ${name} and my age is ${age} !`)
