@@ -1,0 +1,35 @@
+// import and export
+// rquire
+
+import express from "express"
+
+// default import
+import anything from "./data.js"
+
+// named import 
+import {data} from "source"
+
+const app = express()
+
+// console.log(anything)
+anything("some name")
+
+app.get("/",(req,res)=>{
+    res.send("hello user !")
+})
+
+app.get("/about",(req,res)=>{
+    res.send("hello user  about!")
+})
+
+app.get("/contact",(req,res)=>{
+    res.send("hello user  contact!")
+})
+
+app.listen(4000,()=>{
+    console.log("server is running on port 4000 !")
+})
+
+// localhost:port
+
+// localhost:4000

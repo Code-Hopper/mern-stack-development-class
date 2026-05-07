@@ -1,0 +1,15 @@
+#parent {
+    padding: 5rem;
+
+    &:hover{
+        background-color: black;
+    }
+
+    >.chlid {
+        background-color: red;
+        width: 50px;
+        &:hover{
+            background-color: blue;
+        }
+    }
+}

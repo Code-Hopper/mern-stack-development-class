@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap/css/bootstrap.css">
+    <script src="../../bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-    
-    <div class="carousel slide">
-        
+
+<body class="bg-dark">
+
+    <div class="carousel slide" id="carouselExample">
+        <div class="carousel-inner">
+            <div class="carousel-item active d-flex justify-content-center align-items-center vh-100">
+                <!-- <img src="https://picsum.photos/id/237/200/300" alt=""> -->
+                <h1 class="text-light">Slide 1</h1>
+            </div>
+            <div class="carousel-item d-flex justify-content-center align-items-center vh-100">
+                <!-- <img src="https://picsum.photos/id/238/200/300" alt=""> -->
+                <h1 class="text-light">Slide 2</h1>
+            </div>
+            <div class="carousel-item d-flex justify-content-center align-items-center vh-100">
+                <!-- <img src="https://picsum.photos/id/239/200/300" alt=""> -->
+                <h1 class="text-light">Slide 3</h1>
+            </div>
+            <div class="carousel-item d-flex justify-content-center align-items-center vh-100">
+                <!-- <img src="https://picsum.photos/id/240/200/300" alt=""> -->
+                <h1 class="text-light">Slide 4</h1>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+    <div class="p-5 border border-light placeholder-glow">
+
     </div>
 
 </body>
+
 </html>
