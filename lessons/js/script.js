@@ -597,6 +597,3 @@
 // a = a.replaceAll("a", "y")
 
 // console.log(a)
-
-// matching
-// regex->regular expersion
