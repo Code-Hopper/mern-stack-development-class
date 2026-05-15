@@ -609,21 +609,63 @@
 // let pattern1 = new RegExp("")
 // let pattern1 = /"pattern"/ 
 
-let pattern1 = /\d/
-let pattern2 = /\w/g
-let pattern3 = /\s/
-let pattern4 = /^[Hello]/g
-// let pattern5 = /^{8,10}$/
-let pattern6 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,15}$/;
+// let pattern1 = /\d/
+// let pattern2 = /\w/g
+// let pattern3 = /\s/
+// let pattern4 = /^[Hello]/g
+// // let pattern5 = /^{8,10}$/
+// let pattern6 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,15}$/;
 
-let inputString = "12345@ameA"
+// let inputString = "12345@ameA"
 
-console.log(pattern1.test(inputString))
-console.log(pattern2.test(inputString))
-console.log(pattern3.test(inputString))
+// console.log(pattern1.test(inputString))
+// console.log(pattern2.test(inputString))
+// console.log(pattern3.test(inputString))
 
-console.log(inputString.match(pattern1))
+// console.log(inputString.match(pattern1))
 
-console.log(inputString.match(pattern4))
+// console.log(inputString.match(pattern4))
 
-console.log(inputString.match(pattern6))
+// console.log(inputString.match(pattern6))
+
+// object
+
+// JavaScriptObjectNotation
+
+// key:value, pair
+
+let myData = {
+    name: "Mayuri Prabhakar Raut",
+    age: 24,
+    height: 179,
+    weight: 84.32,
+    address: "sakkaradhara, nagpur",
+    phone: 9766696550
+}
+
+console.log(myData.name.slice(myData.name.indexOf(" "), myData.name.lastIndexOf(" ")))  
+
+console.log(myData.name.slice(0,myData.name.indexOf(" "))) 
+
+console.log(myData.name.slice(myData.name.lastIndexOf(" "), myData.name.length)) 
+
+myData.address = "pune"
+myData.height += 10
+console.log(myData.height)
+console.log(myData.weight)
+console.log(myData.address)
+console.log(myData.phone)
+
+console.log(myData)
+
+// let objectName = {
+//     key1 : value1,
+//     .
+//     .
+//     .
+//     .
+//     .
+//     keyn : valuen
+// }
+
+// Array
