@@ -760,3 +760,69 @@
 
 // multi dimensional array
 // matrix
+
+let numbers = [1, 2, 3, 4, 5]
+
+// console.log(numbers.length) // 5
+// // element add, remove 
+// // push() add elements in array from trailing side, unshift() add elements in array from leading side
+// // pop() remove elements from trailing side, shift() remove elements from leading side
+
+// numbers.push(6)
+// numbers.push(7)
+// numbers.push(8)
+
+// console.log(numbers)
+
+// numbers.unshift(0)
+// numbers.unshift(-1)
+// numbers.unshift(-2)
+
+// console.log(numbers)
+
+// numbers.pop()
+// numbers.pop()
+// numbers.pop()
+
+// console.log(numbers)
+
+// numbers.shift()
+// numbers.shift()
+// numbers.shift()
+// numbers.shift()
+
+// console.log(numbers)
+
+// numbers.splice(start, delete, replacement)
+
+// console.log(numbers)
+
+// numbers.splice(2,1,)
+
+// console.log(numbers)
+
+// let newArray = numbers.slice(0, 3)
+
+// console.log(newArray)
+// console.log(numbers)
+
+let fruits = "apple,mango,banana,dargon fruit,grapes,water melon"
+
+let fruitArray = fruits.split(",")
+
+console.log(fruitArray)
+
+// looping for array [for of, for each, map, filter]
+
+for(let x of fruitArray){
+    console.log("i like "+x)
+}
+
+numbers.forEach(sqNumber)
+
+let newNumbers = [5,6,7,8,9,10]
+newNumbers.forEach(sqNumber)
+
+function sqNumber(x){
+    console.log(x*x)
+}
