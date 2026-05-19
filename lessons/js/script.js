@@ -818,11 +818,14 @@ for(let x of fruitArray){
     console.log("i like "+x)
 }
 
+const sqNumber = (x) => {
+    console.log(x*x)
+}
+
 numbers.forEach(sqNumber)
+
+
 
 let newNumbers = [5,6,7,8,9,10]
 newNumbers.forEach(sqNumber)
 
-function sqNumber(x){
-    console.log(x*x)
-}
