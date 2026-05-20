@@ -824,8 +824,90 @@
 
 // numbers.forEach(sqNumber)
 
-
-
 // let newNumbers = [5,6,7,8,9,10]
 // newNumbers.forEach(sqNumber)
 
+
+// function -> reusable block of code
+
+// their are 2 syntax to create a function
+
+// normal function(function keyword)
+
+// function function_name(args[optionals]) {
+//     // code   
+//     // return statement(optional)
+// }
+
+// function_name(pass value if needed)
+
+// arrow function(module, fat arrow) 
+
+// [var, let,const]scope function_name = (args[optional]) => {
+//     // code
+//     // return statmement(optional)
+// }
+
+// function_name(args[Optional])
+
+// arrow functions are hoisted
+
+// function greet(name){
+//     console.log("hello " + name)
+// }
+
+// // ES6
+
+// greet()
+
+// const greet = (name) => {
+//     console.log("hello " + name)
+// } 
+
+// function greet(name) {
+//     console.log("hello " + name)
+// }
+
+// function add(n1, n2) {
+//     console.log(n1 + n2)
+// }
+
+factorial(5)
+factorial(4)
+factorial(2)
+factorial(9)
+
+let greet = (name) => {
+    console.log("hello " + name)
+}
+
+const add = (n1, n2) => {
+    console.log(n1 + n2)
+}
+
+function factorial(number) {
+    let org_number = number
+    let fact = 1;
+    while (number != 0) {
+        fact = fact * number
+        number--
+    }
+    console.log(`factorial of ${org_number} is ${fact}`)
+}
+
+greet("amey")
+greet("kunal")
+greet("mohit")
+greet("rohit")
+greet("yash")
+
+add(1, 2)
+add(6, 2)
+add(10, 20)
+add(99, 1)
+
+// 4 types of function
+// no args and no return
+// args and return 
+// args but no return 
+// no args but return 
