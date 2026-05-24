@@ -989,5 +989,3 @@ let newArray1 = numbers.filter((element) => {
 
 console.log(newArray)
 console.log(newArray1)
-
-// forEach cannot return anything
