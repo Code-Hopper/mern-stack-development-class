@@ -1025,48 +1025,98 @@
 
 // binary search
 
-// requires a sorted array
+// // requires a sorted array
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
 
-let searchValue = 1
+// let searchValue = 1
 
-let flag = false
+// let flag = false
 
-let lb = 0
+// let lb = 0
 
-let ub = numbers.length - 1
+// let ub = numbers.length - 1
 
-let position = 0
+// let position = 0
 
-let steps = 0
+// let steps = 0
 
-let midPoint;
-while (lb < ub) {
-    steps++
+// let midPoint;
+// while (lb < ub) {
+//     steps++
 
-    midPoint = Math.ceil((lb + ub) / 2)//rounding off to get intergers as the index cannot be float points
+//     midPoint = Math.ceil((lb + ub) / 2)//rounding off to get intergers as the index cannot be float points
 
-    if (numbers[midPoint] == searchValue) {
-        flag = true
-        position = midPoint + 1
-        break;
-    }
+//     if (numbers[midPoint] == searchValue) {
+//         flag = true
+//         position = midPoint + 1
+//         break;
+//     }
 
-    if (numbers[midPoint] < searchValue) {
-        lb = midPoint + 1
-        // RHS
-    } else {
-        ub = midPoint - 1
-    }
-}
+//     if (numbers[midPoint] < searchValue) {
+//         lb = midPoint + 1
+//         // RHS
+//     } else {
+//         ub = midPoint - 1
+//     }
+// }
 
-if (flag) {
-    console.log(`we found element ${searchValue} at position ${position} !`)
-    console.log(`in ${steps} steps`)
-} else {
-    console.log(`unable to found element ${searchValue} in array !`)
-    console.log(`in ${steps} steps`)
-}
+// if (flag) {
+//     console.log(`we found element ${searchValue} at position ${position} !`)
+//     console.log(`in ${steps} steps`)
+// } else {
+//     console.log(`unable to found element ${searchValue} in array !`)
+//     console.log(`in ${steps} steps`)
+// }
 
 // bubble sort , selection sort
+
+// let numbers = [3, 5, 2, 1, 4, 5, 0, -1, -1]
+
+// let swaped = false
+
+// for (let i = 0; i < numbers.length - 1; i++) {
+
+//     swaped = false
+
+//     for (let j = 0; j < numbers.length - i - 1; j++) {
+//         if (numbers[j] > numbers[j + 1]) {
+//             // swap
+//             let temp = numbers[j]
+//             numbers[j] = numbers[j + 1]
+//             numbers[j + 1] = temp
+
+//             swaped = true
+
+//         }
+//     }
+//     if (!swaped) break
+// }
+
+// console.log("sorted array")
+// console.log(numbers)
+
+// selection sort 
+
+// let numbers = [3, 5, 2, 1, 4, 0, -1, 5, 2]
+
+// for (let i = 0; i < numbers.length - 1; i++) {
+//     minIndex = i
+//     // swaping 
+//     for (let j = i + 1; j < numbers.length; j++) {
+//         if (numbers[j] < numbers[minIndex]) {
+//             minIndex = j
+//         }
+//     }
+//     // swap
+//     let temp = numbers[minIndex]
+//     numbers[minIndex] = numbers[i]
+//     numbers[i] = temp
+// }
+
+// console.log("sorted array : ")
+// console.log(numbers)
+
+// numbers.sort((a, b) => b - a)
+
+// console.log(numbers)
