@@ -1085,9 +1085,7 @@
 //             let temp = numbers[j]
 //             numbers[j] = numbers[j + 1]
 //             numbers[j + 1] = temp
-
 //             swaped = true
-
 //         }
 //     }
 //     if (!swaped) break
@@ -1120,3 +1118,55 @@
 // numbers.sort((a, b) => b - a)
 
 // console.log(numbers)
+
+// let numbers = [5,3,1,4,2]
+
+// numbers.sort((a,b)=>{
+//     return b - a
+// })
+
+// console.log(numbers)
+
+// let names = ["cat","carry","animal","dog","elephant"]
+
+// names.sort((a,b)=> {
+//     if(a > b){
+//         return -1
+//     }
+// })
+
+// console.log(names)
+
+// // multi dimensional array
+
+// let numbers = 
+// [ 
+//     [1,2,3,4],
+//     [5,6,7],
+//     [8,9,10,11,12,13],
+//     [14,15,16,17,18,19]
+// ]
+
+// // console.log(numbers[0][0])
+// // console.log(numbers[0][1])
+// // console.log(numbers[0][2])
+// // console.log(numbers[0][3])
+
+// // console.log(numbers[1][0])
+// // console.log(numbers[1][1])
+// // console.log(numbers[1][2])
+// // console.log(numbers[1][3])
+
+// // numbers[row][column]
+
+// for(let row = 0 ; row < numbers.length ; row++){
+//     for(let column = 0 ; column < numbers[row].length ; column++){
+//         console.log(numbers[row][column])
+//     }
+// }
+
+// for(let row of numbers){
+//     for(let column of row){
+//         console.log(column)
+//     }
+// }
