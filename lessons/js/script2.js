@@ -92,21 +92,3 @@
 // } finally {
 //     console.log("program completed !")
 // }
-
-// sync code{block code}
-// async code 
-
-// sync
-
-// lin1 -> 2s
-// lin2 -> 3s
-// lin3 -> 4s
-// lin4 -> 1s
-
-// 10s
-
-// // async 
-
-// line1 -> 2s | line2 -> 3 | line3 -> 4s | line4 -> 1s
-
-// 4s
