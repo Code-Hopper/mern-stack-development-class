@@ -92,3 +92,9 @@
 // } finally {
 //     console.log("program completed !")
 // }
+
+// document.getElementById() // single element | null
+// document.getElementsByTagName() // collection of elements | [] 
+// document.getElementsByClassName() // collection of elements | []
+// document.querySelector() // single element | null
+// document.querySelectorAll() // collection of elements | []
