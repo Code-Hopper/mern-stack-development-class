@@ -64,5 +64,3 @@ btn.onclick = () => {
         image.style.display = "none"
     }
 }
-
-// create and append child 
