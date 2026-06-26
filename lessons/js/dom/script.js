@@ -114,7 +114,7 @@ console.log(target.classList.contains("second"))
 
 // onevent = (e)=>{} . addEventListner("event",(e)=>{})
 
-let entries = []
+// let entries = []
 
 // document.getElementById("btn1").onclick = (e) => {
 //     console.log(document.getElementById("input1").value)
