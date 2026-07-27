@@ -29,7 +29,3 @@ app.use((req, res) => {
 app.listen(port, () => {
     console.log(`server is running on port : ${port} !`)
 })
-
-// http://localhost:4001/media/img1.jpg
-
-// http://localhost:4001/media/img1.jpg
