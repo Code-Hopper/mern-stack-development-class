@@ -2,7 +2,7 @@ let data = []
 
 const welcome = (req, res) => {
     // res.status(200).json({ message: "welcome to root route!" })
-    res.status(200).render("index", { name: "amey", age: 3, inputData: data })
+    res.status(200).render("index", { inputData: data })
 }
 
 const handelPostWelcome = (req, res) => {
@@ -10,6 +10,21 @@ const handelPostWelcome = (req, res) => {
     data.push(req.body)
     // res.status(200).render("index")
     res.status(300).redirect("/api/")
+}
+
+const handleDelete = (req, res) => {
+    let { id } = req.params
+
+    data.filter((items, index) => {
+        return id != index
+    })
+
+    res.status(300).redirect("/api/")
+
+}
+
+const handleUpdate = (req, res) => {
+
 }
 
 const message = (req, res) => {
@@ -24,4 +39,4 @@ const handelAbout = (req, res) => {
     res.status(200).render("about")
 }
 
-export { welcome, message, learnMore, handelAbout, handelPostWelcome }
+export { welcome, message, learnMore, handelAbout, handelPostWelcome, handleDelete, handleUpdate }
