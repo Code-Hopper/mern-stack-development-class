@@ -15,13 +15,13 @@
            <th>age</th> 
            <th>action</th> 
         </tr>
-        <% inputData.forEach((item)=>{ %>
+        <% inputData.forEach((item,index)=>{ %>
             <tr>
                 <td><%=item.name %></td>
                 <td><%= item.age %></td>
                 <td>
                     <button>Edit</button>
-                    <button id="deleteBtn">Delete</button>
+                    <button data-element-index=<%= index %> id="deleteBtn">Delete</button>
                 </td>
             </tr>
         <% }) %>

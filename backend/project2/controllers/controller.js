@@ -15,11 +15,15 @@ const handelPostWelcome = (req, res) => {
 const handleDelete = (req, res) => {
     let { id } = req.params
 
-    data.filter((items, index) => {
+    console.log(id)
+
+    data = data.filter((items, index) => {
         return id != index
     })
 
-    res.status(300).redirect("/api/")
+    console.log(data)
+
+    res.status(300).render("index", { inputData: data })
 
 }
 
