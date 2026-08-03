@@ -1,0 +1,22 @@
+db.students.insertMany([
+    {
+        name: "Mayuri Raut",
+        phone: "8007925991",
+        address: "nagpur",
+        age: 20,
+        college: "PJS"
+    },{
+        name: "Amit Kumar",
+        phone: "9766696550",
+        address: "nagpur",
+        age: 24
+    }
+])
+
+show dbs; show all available databases
+use database_name; switch to a certain database
+db.createCollection("collection_name"); creating a collection within the database
+db.collection_name.insertOne({}); inserting a single document
+db.collection_name.insertMany([{},{},{}]); inserting multiple document
+
+db.collection_name.find() show all documents

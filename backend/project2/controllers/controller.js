@@ -44,3 +44,15 @@ const handelAbout = (req, res) => {
 }
 
 export { welcome, message, learnMore, handelAbout, handelPostWelcome, handleDelete, handleUpdate }
+
+// SQL (MySQL, Postgres)
+// name   phone   address
+// om     123     nagpur
+// kunal  123     nagpur
+
+// NoSQL (MongoDB)
+// {
+//     name : om,
+//     phone : 123,
+//     address : nagpur
+// }
