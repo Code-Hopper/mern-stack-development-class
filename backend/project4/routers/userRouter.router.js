@@ -1,6 +1,6 @@
 import express from "express"
 
-import {userRegistration} from "../controllers/user.controller.js"
+import { userRegistration } from "../controllers/user.controller.js"
 
 const userRouter = express.Router()
 
@@ -23,3 +23,5 @@ userRouter.get("/", (req, res) => {
 })
 
 userRouter.post("/register", userRegistration)
+
+export { userRouter }
