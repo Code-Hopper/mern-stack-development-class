@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcrypt"
 
 const userAddressSchema = new mongoose.Schema({
     street1: {
@@ -63,6 +64,11 @@ const userSchema = new mongoose.Schema({
         default: null
     }
 }, { timestamps: true })
+
+userSchema.pre("save", async function () {
+    let hashedPassword = await bcrypt.hash(this.password, 12)
+    this.password = hashedPassword
+})
 
 const userModel = new mongoose.model("users", userSchema)
 
