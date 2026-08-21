@@ -1,4 +1,7 @@
 import { userModel } from "../models/user.model.js"
+import bcrypt from "bcrypt"
+import { generateToken } from "../lib/generateToken.js"
+import { json } from "express"
 
 const userRegistration = async (req, res) => {
     try {
@@ -22,8 +25,8 @@ const userRegistration = async (req, res) => {
         const passwordRegex =
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-        if(!passwordRegex.test(password)){
-            return res.status(400).json({message: "invalid password ! please have minium length 8 chars and atleast one uper case, one lower case, one special char and one digit !"})
+        if (!passwordRegex.test(password)) {
+            return res.status(400).json({ message: "invalid password ! please have minium length 8 chars and atleast one uper case, one lower case, one special char and one digit !" })
         }
 
         let newUser = new userModel({ name, phone, email, address, dob, password, gender, profileImage })
@@ -37,6 +40,30 @@ const userRegistration = async (req, res) => {
     }
 }
 
-export { userRegistration }
+const userLogin = async (req, res) => {
+    try {
+
+        let { email, password } = req.body
+
+        if (!email || !password) return res.status(400).json({ message: "missing email/password !" })
+
+        let checkUserExists = await userModel.findOne({ "email": email })
+
+        if (!checkUserExists) return res.status(404).json({ message: "email does not exits, please register first !" })
+
+        let matchPassword = await bcrypt.compare(password, checkUserExists.password)
+
+        if (!matchPassword) return res.status(401).json({ message: "invalid email/password !" })
+
+        let generatedToken = await generateToken({ email: checkUserExists.email, id: checkUserExists._id })
+
+        res.status(202).json({ message: "login successfull !", user: checkUserExists, token: generatedToken })
+
+    } catch (error) {
+        res.status(500).json({ message: "login failed : ", error })
+    }
+}
+
+export { userRegistration, userLogin }
 
 // phone or email

@@ -1,6 +1,6 @@
 import express from "express"
 
-import { userRegistration } from "../controllers/user.controller.js"
+import { userRegistration, userLogin } from "../controllers/user.controller.js"
 
 const userRouter = express.Router()
 
@@ -23,5 +23,7 @@ userRouter.get("/", (req, res) => {
 })
 
 userRouter.post("/register", userRegistration)
+
+userRouter.post("/login", userLogin)
 
 export { userRouter }
