@@ -64,6 +64,17 @@ const userLogin = async (req, res) => {
     }
 }
 
-export { userRegistration, userLogin }
+const userInfo = async (req, res) => {
+    try {
+        let user = req.user
 
-// phone or email
+        if (!user) throw ("failed to get user !")
+
+        res.status(200).json({ message: "got user profile !", user })
+
+    } catch (error) {
+        res.status(500).json({ message: "unable to get user info !", error })
+    }
+}
+
+export { userRegistration, userLogin, userInfo }

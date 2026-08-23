@@ -1,6 +1,7 @@
 import express from "express"
+import { authUser } from "../lib/authToken.js"
 
-import { userRegistration, userLogin } from "../controllers/user.controller.js"
+import { userRegistration, userLogin, userInfo } from "../controllers/user.controller.js"
 
 const userRouter = express.Router()
 
@@ -25,5 +26,8 @@ userRouter.get("/", (req, res) => {
 userRouter.post("/register", userRegistration)
 
 userRouter.post("/login", userLogin)
+
+// protected route
+userRouter.get("/me", authUser, userInfo)
 
 export { userRouter }
