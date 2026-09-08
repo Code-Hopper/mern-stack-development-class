@@ -1,9 +1,7 @@
 import React from 'react'
 
-// import "./styles/style.css"
-import "../node_modules/bootstrap/dist/css/bootstrap.css"
-
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+import "./styles/style.css"
+import Comp1 from './components/Comp1'
 
 const App = () => {
 
@@ -19,7 +17,14 @@ const App = () => {
       <h1 style={style2}>hello world</h1>
       <h1 style={style3}>hello world</h1>
       <h1 style={style1}>hello world</h1> */}
-      <h1 className='text-danger fs-2 fw-bolder'>hello world</h1>
+
+      <Comp1 />
+      {/* rendering */}
+
+      <h1 className='text-red-500 text-5xl font-bold'>hello world</h1>
+      <div className='w-[500px] h-[500px] bg-yellow-200'>
+        <h1>content</h1>
+      </div>
     </div>
   )
 }
