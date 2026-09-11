@@ -2,6 +2,7 @@ import React from 'react'
 
 import "./styles/style.css"
 import Comp1 from './components/Comp1'
+import Comp2 from './components/Comp2'
 
 const App = () => {
 
@@ -17,7 +18,7 @@ const App = () => {
       <h1 style={style2}>hello world</h1>
       <h1 style={style3}>hello world</h1>
       <h1 style={style1}>hello world</h1> */}
-
+      <Comp2 />
       <Comp1 />
       {/* rendering */}
 
