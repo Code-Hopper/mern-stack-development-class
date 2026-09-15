@@ -34,10 +34,13 @@ const Comp2 = () => {
 
         console.log(name, value)
 
+        if(name == "age"){
+            
+        }
+
         setFormData((prev) => {
             return { ...prev, [name]: value }
         })
-
     }
 
     return (
