@@ -1,9 +1,16 @@
 import React from 'react'
 
-const DisplayGrid = (props) => {
+import { useStudent } from '../context/StudentContext'
+
+const Grid = () => {
+
+    let { studentData } = useStudent()
+
+    console.log(studentData)
+
     return (
         <div>
-            {props.studentData.map((student) => {
+            {studentData.map((student) => {
                 return (
                     <div>
                         name: {student.name}
@@ -18,4 +25,4 @@ const DisplayGrid = (props) => {
     )
 }
 
-export default DisplayGrid
+export default Grid

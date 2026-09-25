@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-const StudentForm = (props) => {
+import { useStudent } from '../context/StudentContext'
+
+const StudentForm = () => {
+
+    let { studentData, addStudent } = useStudent()
 
     let [studentFormData, setStudentFormData] = useState({
         name: "",
@@ -9,6 +13,13 @@ const StudentForm = (props) => {
         note: "",
         phone: ""
     })
+
+
+    useEffect(() => {
+        alert(studentData.name + " has been added to list !")
+    },
+        [studentData]
+    )
 
     const handleChange = (e) => {
         let { name, value } = e.target
@@ -21,7 +32,7 @@ const StudentForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         try {
-            props.addStudent(studentFormData)
+            addStudent(studentFormData)
         } catch (err) {
 
         }
@@ -29,9 +40,9 @@ const StudentForm = (props) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} value={studentFormData.name} name='name' type="text" placeholder='name' />
-                <input onChange={handleChange} value={studentFormData.roll} name='roll' type="text" placeholder='roll no' />
+            <form className='flex gap-2 justify- items-' onSubmit={handleSubmit}>
+                <input className='m-lg-[100px] p-lg-[100px] m-32' onChange={handleChange} value={studentFormData.name} name='name' type="text" placeholder='name' />
+                <input className='' onChange={handleChange} value={studentFormData.roll} name='roll' type="text" placeholder='roll no' />
                 <input onChange={handleChange} value={studentFormData.class} name='class' type="text" placeholder='class' />
                 <input onChange={handleChange} value={studentFormData.note} name='note' type="text" placeholder='note' />
                 <input onChange={handleChange} value={studentFormData.phone} name='phone' type="text" placeholder='phone' />
@@ -42,3 +53,8 @@ const StudentForm = (props) => {
 }
 
 export default StudentForm
+
+
+// classname-reponsive-value{predefined/[custom]}
+// ms/ps me/pe mt/pt mb/pb mx/px my/py
+// classname(border)-s/e/t/b-value([custom])

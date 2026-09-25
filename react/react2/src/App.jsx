@@ -1,23 +1,17 @@
 import React, { useState } from 'react'
 
 import StudentForm from './components/StudentForm'
-import DisplayGrid from './components/DisplayGrid'
+import Grid from './components/DisplayGrid'
+import { StudentProvider } from './context/StudentContext'
 
 const App = () => {
 
-  let [studentData, setStudentData] = useState([])
-
-  const addToStudentData = (student) => {
-    setStudentData(prev => {
-      return [...prev, student]
-    })
-    console.log(studentData)
-  }
-
   return (
     <>
-      <StudentForm addStudent={addToStudentData} />
-      <DisplayGrid studentData={studentData}/>
+      <StudentProvider>
+        <StudentForm />
+        <Grid />
+      </StudentProvider>
     </>
   )
 }
