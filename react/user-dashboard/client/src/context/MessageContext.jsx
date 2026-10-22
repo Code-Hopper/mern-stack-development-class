@@ -7,7 +7,7 @@ const MessageProvider = ({ children }) => {
     let [message, setMessage] = useState({
         status: "", //success, error, warning
         content: "",
-        isLive: true
+        isLive: false
     })
 
     const triggerMessage = (status, content) => {
