@@ -30,6 +30,6 @@ const MessageProvider = ({ children }) => {
 
 export default MessageProvider
 
-const useMessage = () => useContext(MessageContext)
+const useMessage = () =>  useContext(MessageContext)
 
 export { useMessage }
